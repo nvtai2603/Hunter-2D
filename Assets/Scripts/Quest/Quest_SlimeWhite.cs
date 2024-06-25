@@ -21,6 +21,9 @@ public class Quest_SlimeWhite : MonoBehaviour
     [SerializeField] private Color completedColor = Color.green;
     [SerializeField] private Color incompleteColor = Color.red;
     [SerializeField] TextMeshProUGUI txtInfor;
+
+    [SerializeField] public int coinReward = 100;
+    bool isCompleted = false;
     private void Awake()
     {
         if (instance == null)
@@ -33,7 +36,7 @@ public class Quest_SlimeWhite : MonoBehaviour
     {
         txtViewQuest.gameObject.SetActive(false);
         questPanel.SetActive(false);
-        txtInfor.text = "Kill " + slimesNeeded + " Slime White";
+        txtInfor.text = "Kill " + slimesNeeded + " White Slimes";
         cancelButton.onClick.AddListener(CancelQuest);
         acceptButton.onClick.AddListener(AcceptQuest);
     }
@@ -76,7 +79,7 @@ public class Quest_SlimeWhite : MonoBehaviour
 
         if (txtQuest != null)
         {
-            txtQuest.text = "Kill Slimes White " + slimesKilled + "/" + slimesNeeded;
+            txtQuest.text = "Kill White Slimes " + slimesKilled + "/" + slimesNeeded;
             txtQuest.color = incompleteColor;
         }
 
@@ -100,24 +103,25 @@ public class Quest_SlimeWhite : MonoBehaviour
             CheckQuestCompletion();
         }
     }
-
     void CheckQuestCompletion()
     {
+        if (isCompleted) return;
         if (slimesKilled >= slimesNeeded)
         {
-            Debug.Log("Quest Completed!");
-            if (txtQuest != null)
-            {
-                txtQuest.color = completedColor;
-            }
+            txtQuest.color = completedColor;
+            GameObject newQuest = Instantiate(Rewards_Quest.instance.txtQuestComplete, Rewards_Quest.instance.rewardsContent); ;
+            txtQuest = newQuest.GetComponent<TextMeshProUGUI>();
+            txtQuest.text = "Kill White Slimes Completed";
+            Rewards_Quest.instance.totalCoinReward += coinReward;
+            isCompleted = true;
         }
     }
 
     void UpdateQuestText()
     {
-        if (txtQuest != null)
+        if (txtQuest != null && !isCompleted)
         {
-            txtQuest.text = "Kill Slimes White " + slimesKilled + "/" + slimesNeeded;
+            txtQuest.text = "Kill White Slimes " + slimesKilled + "/" + slimesNeeded;
             txtQuest.color = (slimesKilled >= slimesNeeded) ? completedColor : incompleteColor;
         }
     }
