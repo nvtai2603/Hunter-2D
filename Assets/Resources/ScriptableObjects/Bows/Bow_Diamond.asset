@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be54a9bac80b4804e91dce1300e74250, type: 3}
+  m_Name: Bow_Diamond
+  m_EditorClassIdentifier: 
+  nameBow: Bow Diamond
+  avatarBow: {fileID: 21300000, guid: 32d8e5400ec23ac4592d6d68bd08ede6, type: 3}
+  iconBow: {fileID: 8334076993531077127, guid: d54371d2bc670e54bac30759e552a77f, type: 3}
+  bowPrefab: {fileID: 5925755100223829754, guid: 2b663c24a2a98d345938e57374f1dd61, type: 3}
+  dameBow: 20
+  atkSpeedBow: 2
+  maxPurchase: 1
+  price: 1000

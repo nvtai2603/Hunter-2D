@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be54a9bac80b4804e91dce1300e74250, type: 3}
+  m_Name: Bow_Iron
+  m_EditorClassIdentifier: 
+  nameBow: Bow Iron
+  avatarBow: {fileID: 21300000, guid: 62977776b446b9543b7229b5ffd38919, type: 3}
+  iconBow: {fileID: 7085625981386248182, guid: 0deda7040f4c8bd4382764904aea67fa, type: 3}
+  bowPrefab: {fileID: 393559775187322478, guid: 1cd135edf79209b42b2cabe01e970296, type: 3}
+  dameBow: 15
+  atkSpeedBow: 2
+  maxPurchase: 1
+  price: 600
