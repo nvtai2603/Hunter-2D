@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 31
+  controlID: 81
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -795,9 +795,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 747.41565, y: 506.92004, z: 7.641204}
+    m_Target: {x: 955.31805, y: 418.93173, z: 9.123381}
     speed: 2
-    m_Value: {x: 747.41565, y: 506.92004, z: 7.641204}
+    m_Value: {x: 954.8958, y: 418.78024, z: 9.133075}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -847,9 +847,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 193.07564
+    m_Target: 22.512642
     speed: 2
-    m_Value: 193.07564
+    m_Value: 21.543198
   m_Ortho:
     m_Target: 1
     speed: 2
