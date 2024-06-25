@@ -391,6 +391,7 @@
 "Assets/Scripts/Quest/Quest_SlimeRed.cs"
 "Assets/Scripts/Quest/Quest_SlimeWhite.cs"
 "Assets/Scripts/Quest/Rewards_Quest.cs"
+"Assets/Scripts/Quest/txtMission.cs"
 "Assets/Scripts/ScriptableObject/BowScriptable.cs"
 "Assets/Scripts/Store/ButtonBuy.cs"
 "Assets/Scripts/Store/StreetStall.cs"

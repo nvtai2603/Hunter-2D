@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
 public class PlayerQuests : MonoBehaviour
 {
     public static PlayerQuests instance;
@@ -35,6 +34,32 @@ public class PlayerQuests : MonoBehaviour
             {
                 quest.SetActive(false);
                 isOpen = false;
+            }
+        }
+    }
+    public void DestroyQuest()
+    {
+        foreach (Transform quest in questContent)
+        {
+            if (quest.GetComponent<txtMission>().isCompleted)
+            {
+                Destroy(quest.gameObject);
+                Quest_SlimeBlue.instance.questAccepted = false;
+            }
+            if (quest.GetComponent<txtMission>().isCompleted)
+            {
+                Destroy(quest.gameObject);
+                Quest_SlimeRed.instance.questAccepted = false;
+            }
+            if (quest.GetComponent<txtMission>().isCompleted)
+            {
+                Destroy(quest.gameObject);
+                Quest_SlimeWhite.instance.questAccepted = false;
+            }
+            if (quest.GetComponent<txtMission>().isCompleted)
+            {
+                Destroy(quest.gameObject);
+                Quest_SlimeGreen.instance.questAccepted = false;
             }
         }
     }

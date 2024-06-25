@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\Quest\Rewards_Quest.cs" />
     <Compile Include="Assets\Scripts\Player\Player\PlayerController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\Quest\txtMission.cs" />
     <Compile Include="Assets\Scripts\Store\StreetStall.cs" />
     <Compile Include="Assets\Scripts\Quest\Quest_SlimeWhite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />

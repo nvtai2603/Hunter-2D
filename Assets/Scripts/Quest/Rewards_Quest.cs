@@ -73,5 +73,6 @@ public class Rewards_Quest : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        PlayerQuests.instance.DestroyQuest();
     }
 }

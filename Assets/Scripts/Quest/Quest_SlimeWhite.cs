@@ -13,7 +13,6 @@ public class Quest_SlimeWhite : MonoBehaviour
     [SerializeField] Button acceptButton;
 
     private bool playerInRange;
-    private bool questAccepted;
     [SerializeField] public int slimesKilled;
     [SerializeField] int slimesNeeded = 10;
     private TextMeshProUGUI txtQuest;
@@ -23,7 +22,8 @@ public class Quest_SlimeWhite : MonoBehaviour
     [SerializeField] TextMeshProUGUI txtInfor;
 
     [SerializeField] public int coinReward = 100;
-    bool isCompleted = false;
+    public bool questAccepted { get; set; }
+    public bool isCompleted { get; private set; }
     private void Awake()
     {
         if (instance == null)
@@ -105,6 +105,7 @@ public class Quest_SlimeWhite : MonoBehaviour
     }
     void CheckQuestCompletion()
     {
+        txtMission txtMission = FindObjectOfType<txtMission>();
         if (isCompleted) return;
         if (slimesKilled >= slimesNeeded)
         {
@@ -114,6 +115,7 @@ public class Quest_SlimeWhite : MonoBehaviour
             txtQuest.text = "Kill White Slimes Completed";
             Rewards_Quest.instance.totalCoinReward += coinReward;
             isCompleted = true;
+            txtMission.isCompleted = true;
         }
     }
 
