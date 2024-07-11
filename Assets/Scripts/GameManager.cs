@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("Player")]
@@ -16,6 +17,14 @@ public class GameManager : MonoBehaviour
 
     private List<List<GameObject>> spawnedEnemies;
 
+    [Header("Menu")]
+    [SerializeField] GameObject panelMenu;
+    bool isOpen;
+    [SerializeField] Button resume, setting, menu, btnApplySetting;
+    [SerializeField] GameObject panelBtn;
+    [SerializeField] GameObject panelSetting;
+    bool isOpenSetting;
+
     private void Start()
     {
         spawnedEnemies = new List<List<GameObject>>();
@@ -29,8 +38,29 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(SpawnEnemy(i));
         }
+        resume.onClick.AddListener(OnClickButtonResume);
+        setting.onClick.AddListener(OnClickButtonSetting);
+        btnApplySetting.onClick.AddListener(OnClickButtonApplySetting);
+        menu.onClick.AddListener(OnClickButtonMenu);
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isOpen)
+            {
+                panelMenu.SetActive(true);
+                Time.timeScale = 0f;
+                isOpen = true;
+            }
+            else
+            {
+                panelMenu.SetActive(false);
+                Time.timeScale = 1f;
+                isOpen = false;
+            }
+        }
+    }
     void SpawnPlayer()
     {
         if (spawnPlayer != null && player != null)
@@ -65,5 +95,33 @@ public class GameManager : MonoBehaviour
                 spawnedEnemies[spawnIndex].RemoveAt(i);
             }
         }
+    }
+    void OnClickButtonResume()
+    {
+        panelMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isOpen = false;
+    }
+    void OnClickButtonSetting()
+    {
+        if (!isOpenSetting)
+        {
+            panelSetting.SetActive(true);
+            panelBtn.SetActive(false);
+            isOpenSetting = true;
+        }
+    }
+    void OnClickButtonApplySetting()
+    {
+        if (isOpenSetting)
+        {
+            panelSetting.SetActive(false);
+            panelBtn.SetActive(true);
+            isOpenSetting = false;
+        }
+    }
+    void OnClickButtonMenu()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

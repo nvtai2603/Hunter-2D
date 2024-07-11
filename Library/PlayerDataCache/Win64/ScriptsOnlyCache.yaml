@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - ButtonBuy
     - ChooseBow
     - GameManager
+    - Menu
     - PlayerController
     - PlayerHealth
     - PlayerQuests
@@ -19,9 +20,11 @@ ScriptsOnlyBuild:
     - Quest_SlimeGreen
     - Quest_SlimeRed
     - Quest_SlimeWhite
+    - Rewards_Quest
     - Slime
     - Slime_Health
     - StreetStall
+    - txtMission
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -131,8 +134,11 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/GamePlay.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -144,8 +150,6 @@ ScriptsOnlyBuild:
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
@@ -172,73 +176,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16660}
     - Class: 114
-      Script: {instanceID: 16714}
+      Script: {instanceID: 16662}
     - Class: 114
-      Script: {instanceID: 17442}
+      Script: {instanceID: 16664}
     - Class: 114
-      Script: {instanceID: 17910}
+      Script: {instanceID: 17912}
     - Class: 114
-      Script: {instanceID: 17992}
+      Script: {instanceID: 17994}
     - Class: 114
-      Script: {instanceID: 18256}
+      Script: {instanceID: 18258}
     - Class: 114
-      Script: {instanceID: 18608}
+      Script: {instanceID: 18944}
     - Class: 114
-      Script: {instanceID: 18960}
+      Script: {instanceID: 18962}
     - Class: 114
-      Script: {instanceID: 19530}
+      Script: {instanceID: 19532}
     - Class: 114
-      Script: {instanceID: 19596}
+      Script: {instanceID: 19598}
     - Class: 114
-      Script: {instanceID: 19756}
+      Script: {instanceID: 20428}
     - Class: 114
-      Script: {instanceID: 19892}
+      Script: {instanceID: 20494}
     - Class: 114
-      Script: {instanceID: 20212}
+      Script: {instanceID: 20728}
     - Class: 114
-      Script: {instanceID: 20426}
+      Script: {instanceID: 20734}
     - Class: 114
-      Script: {instanceID: 20492}
+      Script: {instanceID: 20744}
     - Class: 114
-      Script: {instanceID: 20726}
+      Script: {instanceID: 20850}
     - Class: 114
-      Script: {instanceID: 20732}
+      Script: {instanceID: 20958}
     - Class: 114
-      Script: {instanceID: 20742}
+      Script: {instanceID: 21066}
     - Class: 114
-      Script: {instanceID: 20848}
+      Script: {instanceID: 21148}
     - Class: 114
-      Script: {instanceID: 20956}
+      Script: {instanceID: 21162}
     - Class: 114
-      Script: {instanceID: 21064}
+      Script: {instanceID: 21198}
     - Class: 114
-      Script: {instanceID: 21158}
+      Script: {instanceID: 22082}
     - Class: 114
-      Script: {instanceID: 22076}
+      Script: {instanceID: 22368}
     - Class: 114
-      Script: {instanceID: 22362}
+      Script: {instanceID: 22442}
     - Class: 114
-      Script: {instanceID: 22436}
+      Script: {instanceID: 22492}
     - Class: 114
-      Script: {instanceID: 22486}
+      Script: {instanceID: 22500}
     - Class: 114
-      Script: {instanceID: 22494}
+      Script: {instanceID: 22658}
     - Class: 114
-      Script: {instanceID: 22652}
+      Script: {instanceID: 23018}
     - Class: 114
-      Script: {instanceID: 23012}
+      Script: {instanceID: 23210}
     - Class: 114
-      Script: {instanceID: 23204}
+      Script: {instanceID: 23690}
     - Class: 114
-      Script: {instanceID: 23826}
+      Script: {instanceID: 23834}
     - Class: 114
-      Script: {instanceID: 32968}
+      Script: {instanceID: 23878}
     - Class: 114
-      Script: {instanceID: 39914}
-    - Class: 114
-      Script: {instanceID: 39942}
-    - Class: 114
-      Script: {instanceID: 39948}
+      Script: {instanceID: 24628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -265,6 +265,87 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 1839735485
       Script: {instanceID: 0}
+    Assets/Scenes/Main.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 16660}
+    - Class: 114
+      Script: {instanceID: 16662}
+    - Class: 114
+      Script: {instanceID: 16664}
+    - Class: 114
+      Script: {instanceID: 17444}
+    - Class: 114
+      Script: {instanceID: 17994}
+    - Class: 114
+      Script: {instanceID: 18258}
+    - Class: 114
+      Script: {instanceID: 18944}
+    - Class: 114
+      Script: {instanceID: 18962}
+    - Class: 114
+      Script: {instanceID: 19758}
+    - Class: 114
+      Script: {instanceID: 19894}
+    - Class: 114
+      Script: {instanceID: 20214}
+    - Class: 114
+      Script: {instanceID: 20958}
+    - Class: 114
+      Script: {instanceID: 21066}
+    - Class: 114
+      Script: {instanceID: 21162}
+    - Class: 114
+      Script: {instanceID: 22082}
+    - Class: 114
+      Script: {instanceID: 22492}
+    - Class: 114
+      Script: {instanceID: 34086}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -280,16 +361,22 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 55060a7bf226ac385ce19ebd450f199f
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UIElements
-    className: PanelRaycaster
-  - hash:
-      serializedVersion: 2
       Hash: dd9dda1dfd39e605c49e72003342ef5d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 915204dac8acad99f076d6e72ada0a0f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 55060a7bf226ac385ce19ebd450f199f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UIElements
+    className: PanelRaycaster
   - hash:
       serializedVersion: 2
       Hash: d75df0b83c74ab3d9088964ef8188507
@@ -568,12 +655,6 @@ ScriptsOnlyBuild:
     className: Bone
   - hash:
       serializedVersion: 2
-      Hash: 915204dac8acad99f076d6e72ada0a0f
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 593a641cd7822a10b9a54aa9eb5c3d5e
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -620,6 +701,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
     className: ScriptMachine
+  - hash:
+      serializedVersion: 2
+      Hash: d474d995319a3234584f2f1675b93be1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BowScriptable
   - hash:
       serializedVersion: 2
       Hash: 43ebd945b04bced376c791411cf5a289
@@ -868,7 +955,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8b07b8b022a2f2867be253d4951a784d
+      Hash: 0a345605977efabdb666e8d794ceb415
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeGreen
@@ -1036,10 +1123,22 @@ ScriptsOnlyBuild:
     className: WarpTextExample
   - hash:
       serializedVersion: 2
+      Hash: c7e10b84d6db38fc05aa2f5eccf73529
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Rewards_Quest
+  - hash:
+      serializedVersion: 2
       Hash: 17f82e3e7d8f8b07a270a4aad9bfe79d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a235385d3bf71d026c6980660a124557
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: txtMission
   - hash:
       serializedVersion: 2
       Hash: 0dd14e314956b0d0d83ffcffe60aa46f
@@ -1132,13 +1231,13 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
-      Hash: 267107d2f8a53b4ba1c5a7ede37f0a8d
+      Hash: a219116d3038d650208621c4ed458190
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeWhite
   - hash:
       serializedVersion: 2
-      Hash: 6fab7b52b429aa9d9edfdae15f6b32ec
+      Hash: d4fd23cc39492fa2a46cbe4b0361f48e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeRed
@@ -1288,7 +1387,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: 4bb78e36a04244d29cc4f004007ca8ac
+      Hash: 5e6d1990dae775da0551342e7e34dff5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeBlue
@@ -1372,6 +1471,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 9d44ae1f9ce5cbbd4c3af09f410718a0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerStats
+  - hash:
+      serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1394,6 +1499,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 4e5eb7c8718b4bdeb8aedb3de5377175
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ButtonBuy
   - hash:
       serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
@@ -1480,6 +1591,12 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
+      Hash: 94a13bec173d77b98692251aaebc6678
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StreetStall
+  - hash:
+      serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1534,29 +1651,12 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 94a13bec173d77b98692251aaebc6678
+      Hash: ba1e9309517555c0d7dd28523326625e
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: StreetStall
-  - hash:
-      serializedVersion: 2
-      Hash: d474d995319a3234584f2f1675b93be1
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: BowScriptable
-  - hash:
-      serializedVersion: 2
-      Hash: 4e5eb7c8718b4bdeb8aedb3de5377175
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ButtonBuy
-  - hash:
-      serializedVersion: 2
-      Hash: 9d44ae1f9ce5cbbd4c3af09f410718a0
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerStats
+    className: Menu
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Archer 2D/Archer 2D.exe
+  - Assets/Scenes/Main.unity
+  - Assets/Scenes/GamePlay.unity
+  playerPath: D:/Hunter2D/Hunter 2D.exe

@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\ScriptableObject\BowScriptable.cs" />
     <Compile Include="Assets\Scripts\Player\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\Slime.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
