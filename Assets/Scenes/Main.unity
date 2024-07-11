@@ -2928,7 +2928,7 @@ MonoBehaviour:
   btnStart: {fileID: 1382395344}
   btnQuit: {fileID: 2067252901}
   btnSetting: {fileID: 428898951}
-  btnCloseSetting: {fileID: 1736100086}
+  btnApplySetting: {fileID: 1736100086}
   btn: {fileID: 1697798391}
   panelSetting: {fileID: 1120666528}
 --- !u!1660057539 &9223372036854775807
