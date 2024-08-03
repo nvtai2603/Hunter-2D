@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6081312689696064819}
   - component: {fileID: 5049391477319434476}
   - component: {fileID: 6000695944830710891}
-  - component: {fileID: 6628940356304318536}
   m_Layer: 0
   m_Name: QuestText
   m_TagString: QuestText
@@ -66,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quest
+  m_text: Quests
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e87a3de07c23a44390dc17dc6c2ef53, type: 2}
   m_sharedMaterial: {fileID: 2273684880372958164, guid: 6e87a3de07c23a44390dc17dc6c2ef53, type: 2}
@@ -93,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.3
-  m_fontSizeBase: 10.3
+  m_fontSize: 9.75
+  m_fontSizeBase: 9.75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -135,15 +134,3 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6628940356304318536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6685619861754088798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5a1ccb932b1754d9f186f2df7e38c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -379,6 +379,7 @@
 "Assets/Scripts/Enemy/Slime.cs"
 "Assets/Scripts/Enemy/Slime_Health.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/Map/Minimap.cs"
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/Player/Bow/Arrow.cs"
 "Assets/Scripts/Player/Bow/Bow.cs"

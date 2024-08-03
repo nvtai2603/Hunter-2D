@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
+
 public class PlayerQuests : MonoBehaviour
 {
     public static PlayerQuests instance;
@@ -10,17 +10,22 @@ public class PlayerQuests : MonoBehaviour
     [SerializeField] public GameObject txtQuestPrefabs;
     [SerializeField] public Transform questContent;
     public bool isOpen = false;
+    private List<GameObject> activeQuests = new List<GameObject>();
+    [SerializeField] public Color completedColor = Color.green;
+
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
-        }       
+        }
     }
+
     private void Start()
     {
         quest.SetActive(false);
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.L))
@@ -37,30 +42,28 @@ public class PlayerQuests : MonoBehaviour
             }
         }
     }
-    public void DestroyQuest()
+
+    public void AddQuest(GameObject newQuest)
     {
-        foreach (Transform quest in questContent)
+        activeQuests.Add(newQuest);
+    }
+
+    public void DestroyCompletedQuests()
+    {
+        List<GameObject> completedQuests = new List<GameObject>();
+
+        foreach (GameObject quest in activeQuests)
         {
-            if (quest.GetComponent<txtMission>().isCompleted)
+            TextMeshProUGUI txtQuest = quest.GetComponent<TextMeshProUGUI>();
+            if (txtQuest != null && txtQuest.color == completedColor)
             {
-                Destroy(quest.gameObject);
-                Quest_SlimeBlue.instance.questAccepted = false;
+                completedQuests.Add(quest);
             }
-            if (quest.GetComponent<txtMission>().isCompleted)
-            {
-                Destroy(quest.gameObject);
-                Quest_SlimeRed.instance.questAccepted = false;
-            }
-            if (quest.GetComponent<txtMission>().isCompleted)
-            {
-                Destroy(quest.gameObject);
-                Quest_SlimeWhite.instance.questAccepted = false;
-            }
-            if (quest.GetComponent<txtMission>().isCompleted)
-            {
-                Destroy(quest.gameObject);
-                Quest_SlimeGreen.instance.questAccepted = false;
-            }
+        }
+        foreach (GameObject quest in completedQuests)
+        {
+            activeQuests.Remove(quest);
+            Destroy(quest);
         }
     }
 }

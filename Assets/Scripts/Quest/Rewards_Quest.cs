@@ -58,7 +58,7 @@ public class Rewards_Quest : MonoBehaviour
 
     void UpdateCoin()
     {
-        txtCoinReward.text = "$ " + totalCoinReward;
+        txtCoinReward.text = "$" + totalCoinReward;
     }
 
     void CollectReward()
@@ -73,6 +73,23 @@ public class Rewards_Quest : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        PlayerQuests.instance.DestroyQuest();
+        PlayerQuests.instance.DestroyCompletedQuests();
+
+        if(Quest_SlimeWhite.instance.isCompleted == true)
+        {
+            Quest_SlimeWhite.instance.QuestReset();
+        }
+        if (Quest_SlimeGreen.instance.isCompleted == true)
+        {
+            Quest_SlimeGreen.instance.QuestReset();
+        }
+        if (Quest_SlimeBlue.instance.isCompleted == true)
+        {
+            Quest_SlimeBlue.instance.QuestReset();
+        }
+        if (Quest_SlimeRed.instance.isCompleted == true)
+        {
+            Quest_SlimeRed.instance.QuestReset();
+        }
     }
 }

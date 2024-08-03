@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2917177054593355761}
   - component: {fileID: 7268772604653302593}
   - component: {fileID: 7698725996285939373}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slime_White1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   chaseSpeed: 2.5
-  areaCenter: {x: 677.3, y: 516.4, z: 0}
+  areaCenter: {x: 887.9, y: 609.9, z: 0}
   areaRadius: 5
   distanceToKeep: 1.1
   obstacleAvoidanceDistance: 3
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 5411121036451693313}
   - component: {fileID: 8435733125086176931}
   - component: {fileID: 4475688197045897914}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ColliderHealth
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 1042719713100246779}
   - component: {fileID: 8458803471872710642}
   - component: {fileID: 2883930288218173532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7394807578285574397}
   - component: {fileID: 7015782456773391007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: HealthBar_Slime
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 5415257586155023421}
   - component: {fileID: 4918291237284579463}
   - component: {fileID: 682352994026439416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3563816971076634076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3276163301589048228}
   - component: {fileID: 4204072097723624437}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ColliderAttack
   m_TagString: Enemy_Attack
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 1992021555829459139}
   - component: {fileID: 6275135381950899975}
   - component: {fileID: 5554425577653662995}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

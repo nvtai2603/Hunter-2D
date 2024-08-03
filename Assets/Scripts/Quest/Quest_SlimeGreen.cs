@@ -15,9 +15,9 @@ public class Quest_SlimeGreen : MonoBehaviour
     private bool playerInRange;
     [SerializeField] public int slimesKilled;
     [SerializeField] int slimesNeeded = 10;
-    private TextMeshProUGUI txtQuest;
+    public TextMeshProUGUI txtQuest;
 
-    [SerializeField] private Color completedColor = Color.green;
+    [SerializeField] public Color completedColor = Color.green;
     [SerializeField] private Color incompleteColor = Color.red;
     [SerializeField] TextMeshProUGUI txtInfor;
 
@@ -88,6 +88,7 @@ public class Quest_SlimeGreen : MonoBehaviour
         PlayerQuests.instance.isOpen = true;
         questAccepted = true;
         txtViewQuest.gameObject.SetActive(false);
+        PlayerQuests.instance.AddQuest(newQuest);
     }
 
     public void SlimeKilled(SlimeType slimeType)
@@ -106,7 +107,6 @@ public class Quest_SlimeGreen : MonoBehaviour
 
     void CheckQuestCompletion()
     {
-        txtMission txtMission = FindObjectOfType<txtMission>();
         if (isCompleted) return;
         if (slimesKilled >= slimesNeeded)
         {
@@ -116,7 +116,6 @@ public class Quest_SlimeGreen : MonoBehaviour
             txtQuest.text = "Kill Green Slimes Completed";
             Rewards_Quest.instance.totalCoinReward += coinReward;
             isCompleted = true;
-            txtMission.isCompleted = true;
         }
     }
 
@@ -127,5 +126,12 @@ public class Quest_SlimeGreen : MonoBehaviour
             txtQuest.text = "Kill Green Slimes " + slimesKilled + "/" + slimesNeeded;
             txtQuest.color = (slimesKilled >= slimesNeeded) ? completedColor : incompleteColor;
         }
+    }
+    public void QuestReset()
+    {
+        questAccepted = false;
+        isCompleted = false;
+        txtQuest.color = incompleteColor;
+        slimesKilled = 0;
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8673982638068611581}
   - component: {fileID: 5515838547351262793}
   - component: {fileID: 2177238208662102965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slime_Blue1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   chaseSpeed: 2.5
-  areaCenter: {x: 834.4, y: 518.7, z: 0}
+  areaCenter: {x: 823.9, y: 442.2, z: 0}
   areaRadius: 5
   distanceToKeep: 1.1
   obstacleAvoidanceDistance: 3
@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5566496885834714694}
   - component: {fileID: 4055855974948099422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ColliderAttack
   m_TagString: Enemy_Attack
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 8964607450684375890}
   - component: {fileID: 9124142760983180203}
   - component: {fileID: 7925430052358213658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 5549195019995475973}
   - component: {fileID: 3803285163447616370}
   - component: {fileID: 4796045671057266732}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6688281672198427582}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8704230270782647533}
   - component: {fileID: 1452107913140558535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: HealthBar_Slime
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 6155627538564326368}
   - component: {fileID: 2064317389059773697}
   - component: {fileID: 6536384783606050241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 1548023047945051155}
   - component: {fileID: 8908893212098819343}
   - component: {fileID: 8004371516944752945}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ColliderHealth
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -699,6 +699,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 0
   healthSlider: {fileID: 1452107913140558535}
+  slimeType: 0
 --- !u!58 &8004371516944752945
 CircleCollider2D:
   m_ObjectHideFlags: 0

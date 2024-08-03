@@ -53,7 +53,7 @@ public class PlayerStats : MonoBehaviour
 
     public void Coin()
     {
-        txtCoin.text = gold.ToString();
+        txtCoin.text = gold.ToString()+ "$";
     }
 
     public void TotalStats()

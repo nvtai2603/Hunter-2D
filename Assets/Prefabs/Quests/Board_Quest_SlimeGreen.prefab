@@ -1012,9 +1012,11 @@ MonoBehaviour:
   acceptButton: {fileID: 6409360732433147390}
   slimesKilled: 0
   slimesNeeded: 10
+  txtQuest: {fileID: 0}
   completedColor: {r: 0.03137255, g: 0.37254903, b: 0.03137255, a: 1}
   incompleteColor: {r: 0.5176471, g: 0.11372549, b: 0, a: 1}
   txtInfor: {fileID: 8433497094948862662}
+  coinReward: 100
 --- !u!1 &5005178778137223685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,7 +1398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012207, y: 411}
+  m_AnchoredPosition: {x: 447, y: 63}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1949032248313651239
@@ -1437,7 +1439,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4286381824
-  m_fontColor: {r: 0, g: 0.05490196, b: 0.43529412, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
