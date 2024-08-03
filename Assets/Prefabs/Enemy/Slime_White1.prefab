@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1.5
   chaseSpeed: 2.5
-  areaCenter: {x: 887.9, y: 609.9, z: 0}
+  areaCenter: {x: 909.3, y: 588.4, z: 0}
   areaRadius: 5
   distanceToKeep: 1.1
   obstacleAvoidanceDistance: 3

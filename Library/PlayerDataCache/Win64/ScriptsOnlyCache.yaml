@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - ChooseBow
     - GameManager
     - Menu
+    - Minimap
     - PlayerController
     - PlayerHealth
     - PlayerQuests
@@ -24,10 +25,10 @@ ScriptsOnlyBuild:
     - Slime
     - Slime_Health
     - StreetStall
-    - txtMission
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
+    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -65,8 +66,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -84,6 +87,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Slider
@@ -160,6 +164,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -176,6 +182,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 16662}
     - Class: 114
       Script: {instanceID: 16664}
+    - Class: 114
+      Script: {instanceID: 17614}
     - Class: 114
       Script: {instanceID: 17912}
     - Class: 114
@@ -211,29 +219,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21164}
     - Class: 114
-      Script: {instanceID: 21200}
+      Script: {instanceID: 22082}
     - Class: 114
-      Script: {instanceID: 22084}
+      Script: {instanceID: 22368}
     - Class: 114
-      Script: {instanceID: 22370}
+      Script: {instanceID: 22442}
     - Class: 114
-      Script: {instanceID: 22444}
+      Script: {instanceID: 22492}
     - Class: 114
-      Script: {instanceID: 22494}
+      Script: {instanceID: 22500}
     - Class: 114
-      Script: {instanceID: 22502}
+      Script: {instanceID: 22658}
     - Class: 114
-      Script: {instanceID: 22660}
+      Script: {instanceID: 23018}
     - Class: 114
-      Script: {instanceID: 23020}
+      Script: {instanceID: 23210}
     - Class: 114
-      Script: {instanceID: 23212}
+      Script: {instanceID: 23690}
     - Class: 114
-      Script: {instanceID: 23692}
+      Script: {instanceID: 23834}
     - Class: 114
-      Script: {instanceID: 23836}
+      Script: {instanceID: 23878}
     - Class: 114
-      Script: {instanceID: 23880}
+      Script: {instanceID: 24426}
     - Class: 114
       Script: {instanceID: 24630}
     - Class: 115
@@ -322,9 +330,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21164}
     - Class: 114
-      Script: {instanceID: 22084}
+      Script: {instanceID: 22082}
     - Class: 114
-      Script: {instanceID: 22494}
+      Script: {instanceID: 22492}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -946,7 +954,7 @@ ScriptsOnlyBuild:
     className: ObjectSpin
   - hash:
       serializedVersion: 2
-      Hash: 1e4da50752e7ad0bc2a75c15b7fb651a
+      Hash: 3fb9bdf68ce3a445cb5da03b820c4910
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerQuests
@@ -958,7 +966,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 0a345605977efabdb666e8d794ceb415
+      Hash: 75082cf58f023744b3673b7f305d2364
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeGreen
@@ -1138,12 +1146,6 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: a235385d3bf71d026c6980660a124557
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: txtMission
-  - hash:
-      serializedVersion: 2
       Hash: 0dd14e314956b0d0d83ffcffe60aa46f
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
@@ -1234,13 +1236,13 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
-      Hash: a219116d3038d650208621c4ed458190
+      Hash: 6321da7ad93e8b4f54e5e072444e4465
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeWhite
   - hash:
       serializedVersion: 2
-      Hash: d4fd23cc39492fa2a46cbe4b0361f48e
+      Hash: 023c772767c8fbf9dab8e3393f6a1d80
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeRed
@@ -1294,7 +1296,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 013eb53bbe10b3d14ccd30cf0639fcd7
+      Hash: f715b33078af5b0b0768b563c0ffa0a1
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameManager
@@ -1390,7 +1392,7 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
-      Hash: 5e6d1990dae775da0551342e7e34dff5
+      Hash: f9528241eea0984d592f08b492d56a3a
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Quest_SlimeBlue
@@ -1586,6 +1588,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TeleType
+  - hash:
+      serializedVersion: 2
+      Hash: fb656023eb432170e997f1ead9b6c020
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Minimap
   - hash:
       serializedVersion: 2
       Hash: 9fb1c3ab48b256d508ecddd967f98652

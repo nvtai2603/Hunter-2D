@@ -24,6 +24,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject panelBtn;
     [SerializeField] GameObject panelSetting;
     bool isOpenSetting;
+    [Header("Map")]
+    [SerializeField] GameObject panelMap;
+    bool isOpenmap;
+    [Header("MiniMap")]
+    [SerializeField] GameObject panelMiniMap;
+    bool isOpenminimap = true;
 
     private void Start()
     {
@@ -58,6 +64,34 @@ public class GameManager : MonoBehaviour
                 panelMenu.SetActive(false);
                 Time.timeScale = 1f;
                 isOpen = false;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            if (!isOpenmap)
+            {
+                panelMap.SetActive(true);
+                Time.timeScale = 0f;
+                isOpenmap = true;
+            }
+            else
+            {
+                panelMap.SetActive(false);
+                Time.timeScale = 1f;
+                isOpenmap = false;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (!isOpenminimap)
+            {
+                panelMiniMap.SetActive(true);
+                isOpenminimap = true;
+            }
+            else
+            {
+                panelMiniMap.SetActive(false);
+                isOpenminimap = false;
             }
         }
     }
