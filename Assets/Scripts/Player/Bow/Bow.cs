@@ -25,13 +25,15 @@ public class Bow : MonoBehaviour
     Vector3 mouseDownPosition;
     float pullTime;
     Animator anim;
+
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
     }
+
     private void Start()
     {
         originalScale = transform.localScale;
@@ -55,11 +57,14 @@ public class Bow : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canShoot)
         {
             StartPulling();
+            AudioManager.instance.PlayLoopingSFX(AudioManager.instance.bowLoading);
         }
 
         if (Input.GetMouseButtonUp(0) && isPulling)
         {
             StopPulling();
+            AudioManager.instance.StopLoopingSFX();
+            AudioManager.instance.PlaySFX(AudioManager.instance.bowShoot);
         }
 
         if (isPulling)

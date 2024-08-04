@@ -6,41 +6,61 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
     [SerializeField] Transform bow;
+    [SerializeField] AudioSource footStep;
     Rigidbody2D r2d;
     Vector2 move;
     Vector2 lastMove;
     Animator anim;
+
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
     }
+
     private void Start()
     {
         r2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
+
     private void Update()
     {
         transform.rotation = Quaternion.identity;
+        footStep.volume = AudioManager.instance.sfx.volume;
         Move();
         RotateBow();
     }
+
     void Move()
     {
         move.x = Input.GetAxisRaw("Horizontal");
         move.y = Input.GetAxisRaw("Vertical");
+
         if (move != Vector2.zero)
         {
             lastMove = move;
+            if (!footStep.isPlaying)
+            {
+                footStep.Play();
+            }
         }
+        else
+        {
+            if (footStep.isPlaying)
+            {
+                footStep.Stop();
+            }
+        }
+
         anim.SetFloat("Horizontal", lastMove.x);
         anim.SetFloat("Vertical", lastMove.y);
         anim.SetFloat("Speed", move.sqrMagnitude);
         r2d.velocity = move.normalized * PlayerStats.instance.moveSpeed;
     }
+
     void RotateBow()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
