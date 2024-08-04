@@ -135,4 +135,5 @@ public class Quest_SlimeBlue : MonoBehaviour
         txtQuest.color = incompleteColor;
         slimesKilled = 0;
     }
+
 }

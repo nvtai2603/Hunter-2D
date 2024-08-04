@@ -18,6 +18,7 @@ public class StreetStall : MonoBehaviour
         shopPanel.SetActive(false);
         LoadGunScriptableObjects();
     }
+
     void Update()
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
@@ -25,6 +26,7 @@ public class StreetStall : MonoBehaviour
             shopPanel.SetActive(true);
         }
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -33,6 +35,7 @@ public class StreetStall : MonoBehaviour
             playerInRange = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -41,6 +44,7 @@ public class StreetStall : MonoBehaviour
             playerInRange = false;
         }
     }
+
     private void LoadGunScriptableObjects()
     {
         _listDatabow.Clear();

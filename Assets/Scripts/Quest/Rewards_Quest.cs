@@ -27,6 +27,7 @@ public class Rewards_Quest : MonoBehaviour
     private void Start()
     {
         collectRewardButton.onClick.AddListener(CollectReward);
+        panelRewards.SetActive(false);
     }
 
     private void Update()

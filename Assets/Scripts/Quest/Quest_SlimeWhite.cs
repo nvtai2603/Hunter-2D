@@ -38,7 +38,7 @@ public class Quest_SlimeWhite : MonoBehaviour
         questPanel.SetActive(false);
         txtInfor.text = "Kill " + slimesNeeded + " White Slimes";
         cancelButton.onClick.AddListener(CancelQuest);
-        acceptButton.onClick.AddListener(AcceptQuest);
+        acceptButton.onClick.AddListener(AcceptQuest);     
     }
 
     void Update()

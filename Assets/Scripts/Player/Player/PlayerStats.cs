@@ -19,13 +19,6 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float totalATKDame;
     [SerializeField] float totalATKSpeed;
 
-    [SerializeField] GameObject panelStats;
-    bool isOpen = false;
-    [SerializeField] TextMeshProUGUI txttotalMoveSpeed;
-    [SerializeField] TextMeshProUGUI txttotalHealth;
-    [SerializeField] TextMeshProUGUI txttotalATKDame;
-    [SerializeField] TextMeshProUGUI txttotalATKSpeed;
-
     private void Awake()
     {
         if (instance == null)
@@ -37,18 +30,12 @@ public class PlayerStats : MonoBehaviour
     private void Start()
     {
         gold = PlayerPrefs.GetInt("Gold", gold);
-        panelStats.SetActive(false);
     }
 
     private void Update()
     {
         Coin();
         TotalStats();
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            panelStats.SetActive(!isOpen);
-            isOpen = !isOpen;
-        }
     }
 
     public void Coin()
@@ -71,16 +58,6 @@ public class PlayerStats : MonoBehaviour
         if (Bow.instance != null)
         {
             totalATKSpeed = Bow.instance.shootDelay - atkSpeed;
-            txttotalATKSpeed.gameObject.SetActive(true);
         }
-        else
-        {
-            txttotalATKSpeed.gameObject.SetActive(false);
-        }
-
-        txttotalMoveSpeed.text = "Speed: " + totalMoveSpeed.ToString();
-        txttotalHealth.text = "Health: " + totalHealth.ToString() + " HP";
-        txttotalATKDame.text = "Damage: " + totalATKDame.ToString();
-        txttotalATKSpeed.text = "Attack Speed: " + totalATKSpeed.ToString() + "s";
     }
 }

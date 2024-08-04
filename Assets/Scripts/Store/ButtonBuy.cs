@@ -17,7 +17,7 @@ public class ButtonBuy : MonoBehaviour
     private string buttonName;
     [SerializeField] bool isButtonVisible = true;
     [SerializeField] public bool isBowPurchased = false;
-
+    [SerializeField] AudioSource click;
     private void Start()
     {
         bowImage.sprite = bow.avatarBow;
@@ -33,7 +33,10 @@ public class ButtonBuy : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
+    private void Update()
+    {
+        click.volume = AudioManager.instance.sfx.volume;
+    }
     public void BuyBow()
     {
         ChooseBow chooseBow = FindObjectOfType<ChooseBow>();
@@ -46,7 +49,6 @@ public class ButtonBuy : MonoBehaviour
             isBowPurchased = true;
             chooseBow.AddSlot(bow.iconBow);
             chooseBow.AddBowPrefab(bow.bowPrefab);
-
             SaveBowPrefabs(chooseBow.bowPrefabs);
             SaveSlot(chooseBow.slots);
 
@@ -128,4 +130,9 @@ public class ButtonBuy : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    public void PlayClickSound()
+    {
+        AudioManager.instance.PlaySFX(AudioManager.instance.click);
+    }
+
 }

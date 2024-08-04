@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
         setting.onClick.AddListener(OnClickButtonSetting);
         btnApplySetting.onClick.AddListener(OnClickButtonApplySetting);
         menu.onClick.AddListener(OnClickButtonMenu);
+        panelMenu.SetActive(false);
+        panelSetting.SetActive(false);
     }
     private void Update()
     {
@@ -158,4 +160,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+
 }

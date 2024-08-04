@@ -19,6 +19,8 @@ public class Menu : MonoBehaviour
         btnSetting.onClick.AddListener(OnClickButtonSetting);
         btnApplySetting.onClick.AddListener(OnClickButtonApplySetting);
         btnQuit.onClick.AddListener(OnClickButtonQuit);
+        btn.SetActive(true);
+        panelSetting.SetActive(false);
     }
 
     void OnClickButtonStart()

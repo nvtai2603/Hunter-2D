@@ -25,16 +25,14 @@ public class AudioManager : MonoBehaviour
     private const string MusicVolumeKey = "MusicVolume";
     private const string SFXVolumeKey = "SFXVolume";
 
+    [Header("Button List")]
+    [SerializeField] private List<Button> buttonList;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
         }
     }
 
@@ -52,8 +50,11 @@ public class AudioManager : MonoBehaviour
         {
             sfxVolumeSlider.value = sfx.volume;
         }
+        foreach (Button button in buttonList)
+        {
+            button.onClick.AddListener(() => PlayClickSound(button));
+        }
     }
-
     private void Update()
     {
         if (musicVolumeSlider == null)
@@ -76,7 +77,6 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
-
     public void PlaySFX(AudioClip clip)
     {
         sfx.PlayOneShot(clip);
@@ -119,7 +119,8 @@ public class AudioManager : MonoBehaviour
         }
         PlayerPrefs.SetFloat(SFXVolumeKey, volume);
     }
-    public void PlayClickSound()
+
+    public void PlayClickSound(Button button)
     {
         PlaySFX(click);
     }

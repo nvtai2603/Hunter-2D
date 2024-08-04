@@ -16,6 +16,7 @@ TagManager:
   - QuestText
   - SliderMusic
   - SliderSFX
+  - ButtonUI
   layers:
   - Default
   - TransparentFX

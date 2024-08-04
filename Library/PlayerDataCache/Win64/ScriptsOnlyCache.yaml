@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - BowScriptable
     Assembly-CSharp.dll:
     - Arrow
+    - AudioManager
     - Bow
     - BowScriptable
     - ButtonBuy
@@ -129,9 +130,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: AudioManager
+    methodName: PlayClickSound
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonBuy
+    methodName: PlayClickSound
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -163,6 +167,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -199,51 +207,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 19600}
     - Class: 114
-      Script: {instanceID: 20430}
+      Script: {instanceID: 19714}
     - Class: 114
-      Script: {instanceID: 20496}
+      Script: {instanceID: 20432}
     - Class: 114
-      Script: {instanceID: 20730}
+      Script: {instanceID: 20498}
     - Class: 114
-      Script: {instanceID: 20736}
+      Script: {instanceID: 20732}
     - Class: 114
-      Script: {instanceID: 20746}
+      Script: {instanceID: 20738}
     - Class: 114
-      Script: {instanceID: 20852}
+      Script: {instanceID: 20748}
     - Class: 114
-      Script: {instanceID: 20960}
+      Script: {instanceID: 20854}
     - Class: 114
-      Script: {instanceID: 21068}
+      Script: {instanceID: 20962}
     - Class: 114
-      Script: {instanceID: 21150}
+      Script: {instanceID: 21070}
     - Class: 114
-      Script: {instanceID: 21164}
+      Script: {instanceID: 21152}
     - Class: 114
-      Script: {instanceID: 22082}
+      Script: {instanceID: 21166}
     - Class: 114
-      Script: {instanceID: 22368}
+      Script: {instanceID: 22086}
     - Class: 114
-      Script: {instanceID: 22442}
+      Script: {instanceID: 22372}
     - Class: 114
-      Script: {instanceID: 22492}
+      Script: {instanceID: 22446}
     - Class: 114
-      Script: {instanceID: 22500}
+      Script: {instanceID: 22496}
     - Class: 114
-      Script: {instanceID: 22658}
+      Script: {instanceID: 22504}
     - Class: 114
-      Script: {instanceID: 23018}
+      Script: {instanceID: 22662}
     - Class: 114
-      Script: {instanceID: 23210}
+      Script: {instanceID: 23022}
     - Class: 114
-      Script: {instanceID: 23690}
+      Script: {instanceID: 23214}
     - Class: 114
-      Script: {instanceID: 23834}
+      Script: {instanceID: 23694}
     - Class: 114
-      Script: {instanceID: 23878}
+      Script: {instanceID: 23838}
     - Class: 114
-      Script: {instanceID: 24426}
+      Script: {instanceID: 23882}
     - Class: 114
-      Script: {instanceID: 24630}
+      Script: {instanceID: 24430}
+    - Class: 114
+      Script: {instanceID: 24634}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -293,6 +303,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -318,21 +332,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18964}
     - Class: 114
-      Script: {instanceID: 19760}
+      Script: {instanceID: 19714}
     - Class: 114
-      Script: {instanceID: 19896}
+      Script: {instanceID: 19762}
     - Class: 114
-      Script: {instanceID: 20216}
+      Script: {instanceID: 19898}
     - Class: 114
-      Script: {instanceID: 20960}
+      Script: {instanceID: 20218}
     - Class: 114
-      Script: {instanceID: 21068}
+      Script: {instanceID: 20962}
     - Class: 114
-      Script: {instanceID: 21164}
+      Script: {instanceID: 21070}
     - Class: 114
-      Script: {instanceID: 22082}
+      Script: {instanceID: 21166}
     - Class: 114
-      Script: {instanceID: 22492}
+      Script: {instanceID: 22086}
+    - Class: 114
+      Script: {instanceID: 22496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -810,7 +826,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8b4bbf49cb8a1224822f940ee3fe5f6c
+      Hash: 20eafecf9040a25cb0908e7d5bd9fd31
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
@@ -838,6 +854,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime
     namespaceName: 
     className: SpriteShapeGeometryCache
+  - hash:
+      serializedVersion: 2
+      Hash: 84b2911eb892104aa620d0ce95fc3ace
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 4718916586b3818eb69bf65df61f0f3a
@@ -1476,7 +1498,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 9d44ae1f9ce5cbbd4c3af09f410718a0
+      Hash: b0ec528af5cd0da371894d7f062b0c99
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerStats
@@ -1506,7 +1528,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 4e5eb7c8718b4bdeb8aedb3de5377175
+      Hash: 82a5beebf28bbaa9a3ed7041cad38d32
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ButtonBuy
